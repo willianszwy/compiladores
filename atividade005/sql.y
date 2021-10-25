@@ -1,6 +1,6 @@
 /*
-	Calculadora v.4 - Lê de arquivos ou linha de comando
-	Jucimar Jr
+	SQL v.1 - Lê de arquivos ou linha de comando
+	Willians Oliveira
 */
 
 %{
@@ -64,6 +64,7 @@ void yyerror(char *s)
 
 int main(int argc, char *argv[])
 {
+	yydebug = 1;
 	
 	if (argc == 1)
     {
