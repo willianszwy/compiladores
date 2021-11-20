@@ -1,5 +1,5 @@
 /*
-	SQL v.1 - Lê de arquivos ou linha de comando
+	HTML v.1 - Lê de arquivos ou linha de comando
 	Willians Oliveira
 */
 %option caseless
