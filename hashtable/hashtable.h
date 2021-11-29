@@ -31,14 +31,14 @@ char *hash_lookup(hashtable *hashtab, unsigned char *key)
     }
 }
 
-void hash_insert(hashtable *hashtab, unsigned char *key, char *value)
+void hash_insert(hashtable *hashtab, unsigned char *key, Variable *value)
 { 
     int index = hash_index(hashtab, key);
     list *temp = hashtab->table[index];
     listinsert(temp, nodegen(key, value));
 }
 
-int hash_update(hashtable *hashtab, unsigned char *key, char *value)
+int hash_update(hashtable *hashtab, unsigned char *key, Variable *value)
 {
     int index = hash_index(hashtab, key);
     list *temp = hashtab->table[index];

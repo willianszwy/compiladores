@@ -2,12 +2,19 @@
 #include <string.h>
 #include <stdlib.h>
 
+typedef struct Variable
+{
+    char * name;
+    int value;
+    int scope;
+    char* type
+} Variable;
 // structs
 typedef struct node {
     struct node *previous;
     struct node *next;
     char *key;
-    char *value;
+    struct Variable *value;
 } node;
 
 typedef struct list {
@@ -48,7 +55,7 @@ void destroylist(list *oldlist)
     free(oldlist);
 }
 
-node *nodegen(char *key, char *value)
+node *nodegen(char *key, Variable *value)
 { // make a new node
     node *newnode;
     newnode = malloc(sizeof (node));
@@ -136,7 +143,7 @@ void printlist(list *toprint)
         printf("empty list!\n");
     while (iternode != toprint->tail) {
 	    printf("%s\t", iternode->key);
-	    printf("%s\n", iternode->value);
+	    printf("%s\n", iternode->value->name);
 	    iternode = iternode->next;
     }
 }
