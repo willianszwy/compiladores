@@ -1,0 +1,27 @@
+int numero 
+print("Digite um numero inteiro positivo:")
+read(numero)
+
+# Extraindo a unidade
+int unidade
+unidade = numero % 10
+
+# Eliminando a unidade de nosso número
+numero = (numero - unidade)/10
+
+int dezena
+# Extraindo a dezena
+dezena = numero % 10
+
+int centena
+# Eliminando a dezena do número original, fica a centena
+numero = (numero - dezena)/10
+centena = numero
+
+# Fazendo ser inteiros
+print(centena)
+print("centena(s)")
+print(dezena)
+print("dezena(s) e")
+print(unidade)
+print("unidade(s)")

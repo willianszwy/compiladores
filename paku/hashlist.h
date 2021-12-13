@@ -8,7 +8,7 @@
 typedef struct Variable
 {
     char * name;
-    double value;
+    int value;
     int scope;
     char* type;
 } Variable;

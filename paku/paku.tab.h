@@ -48,12 +48,15 @@
      READ = 264,
      IF = 265,
      ELSE = 266,
-     O_KEY = 267,
-     C_KEY = 268,
-     NUMBER = 269,
-     IDENTIFIER = 270,
-     TYPE = 271,
-     OPERATOR = 272
+     NOT = 267,
+     WHILE = 268,
+     O_KEY = 269,
+     C_KEY = 270,
+     STRING = 271,
+     NUMBER = 272,
+     IDENTIFIER = 273,
+     TYPE = 274,
+     OPERATOR = 275
    };
 #endif
 /* Tokens.  */
@@ -66,12 +69,15 @@
 #define READ 264
 #define IF 265
 #define ELSE 266
-#define O_KEY 267
-#define C_KEY 268
-#define NUMBER 269
-#define IDENTIFIER 270
-#define TYPE 271
-#define OPERATOR 272
+#define NOT 267
+#define WHILE 268
+#define O_KEY 269
+#define C_KEY 270
+#define STRING 271
+#define NUMBER 272
+#define IDENTIFIER 273
+#define TYPE 274
+#define OPERATOR 275
 
 
 
@@ -86,7 +92,7 @@ typedef union YYSTYPE
     struct AstElement* ast;
 }
 /* Line 1529 of yacc.c.  */
-#line 90 "paku.tab.h"
+#line 96 "paku.tab.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
